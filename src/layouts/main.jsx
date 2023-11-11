@@ -31,6 +31,7 @@ function Main() {
                         <Route path="/gallery" element={<Gallery />} />
                         <Route path="/regulasi" element={<Regulasi />} />
                         <Route path="/berita" element={<Berita />} />
+                        <Route path="/contact" element={<Contact />} />
                     </Routes>
                 </div>
                 <Footer />
