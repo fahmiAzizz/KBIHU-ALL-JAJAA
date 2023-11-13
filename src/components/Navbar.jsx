@@ -8,6 +8,7 @@ function Navbar() {
 
     const [nav, setNav] = useState(false);
     const [dropdownVisible, setDropdownVisible] = useState(false);
+    const [dropdownVisible2, setDropdownVisible2] = useState(false);
 
 
     const navActiveStyle = ({ isActive }) => {
@@ -19,6 +20,10 @@ function Navbar() {
 
     const handleDropdownClick = () => {
         setDropdownVisible(!dropdownVisible);
+    };
+
+    const handleDropdownClick2 = () => {
+        setDropdownVisible2(!dropdownVisible2);
     };
 
     return (
@@ -72,11 +77,11 @@ function Navbar() {
                         <li><NavLink style={navActiveStyle} onClick={() => setNav(!nav)} className="border-b border-green-800 nav-link flex " exact to="/">Home</NavLink></li>
                         <li className="group z-10">
                             <div className="relative">
-                                <div onClick={() => {
-                                    handleDropdownClick();
-                                }} className="flex border-b border-green-800 nav-link font-bold justify-between items-center">Tentang Kami <RiArrowDropDownLine size={20} /></div>
-                                <div className="w-full  md:absolute pt-2 top-full -left-3 hidden bg-green-700 shadow-lg p-2 group-hover:block space-y-2 ">
-                                    <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/visimisi" className="block border-b border-green-800 nav-link px-4 py-2 text-sm ">Visi Misi</NavLink>
+                                <div onClick={
+                                    handleDropdownClick2
+                                } className="flex border-b border-green-800 nav-link justify-between items-center">Tentang Kami <RiArrowDropDownLine size={20} /></div>
+                                <div className={`w-40 md:absolute pt-2 top-full -left-3 ${dropdownVisible2 ? "relative w-full" : "hidden"} bg-green-600 shadow-lg p-2 space-y-2`}>
+                                    <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/visimisi" className="block border-b w-full border-green-800 nav-link px-4 py-2 text-sm ">Visi Misi</NavLink>
                                     <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/izinoperasional" className="block border-b border-green-800 nav-link px-4 py-2 text-sm ">Izin Operasional</NavLink>
                                     <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/kepengurusan" className="block border-b border-green-800 nav-link px-4 py-2 text-sm ">Kepengurusan</NavLink>
                                     <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/grafikjamaah" className="block border-b border-green-800 nav-link px-4 py-2 text-sm ">Grafik Jamaah Haji KBIHU</NavLink>
@@ -86,10 +91,10 @@ function Navbar() {
                         </li>
                         <li className="group z-10">
                             <div className="relative">
-                                <div onClick={() => {
-                                    handleDropdownClick();
-                                }} className="flex border-b border-green-800 nav-link font-bold justify-between items-center">Basis Data <RiArrowDropDownLine size={20} /></div>
-                                <div className="w-full  md:absolute pt-2 top-full -left-3 hidden bg-green-700 shadow-lg p-2 group-hover:block space-y-2 ">
+                                <div onClick={
+                                    handleDropdownClick
+                                } className="flex border-b border-green-800 nav-link font-bold justify-between items-center">Basis Data <RiArrowDropDownLine size={20} /></div>
+                                <div className={`w-40 md:absolute pt-2 top-full -left-3 ${dropdownVisible ? "relative w-full" : "hidden"} bg-green-600 shadow-lg p-2 space-y-2`}>
                                     <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/about" className="block px-4 py-2 border-b border-green-800 nav-link text-sm ">Cek No Porsi</NavLink>
                                 </div>
                             </div>
