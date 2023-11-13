@@ -80,7 +80,7 @@ function Navbar() {
                                 <div onClick={
                                     handleDropdownClick2
                                 } className="flex border-b border-green-800 nav-link justify-between items-center">Tentang Kami <RiArrowDropDownLine size={20} /></div>
-                                <div className={`w-40 md:absolute pt-2 top-full -left-3 ${dropdownVisible2 ? "relative w-full" : "hidden"} bg-green-600 shadow-lg p-2 space-y-2`}>
+                                <div className={`md:absolute pt-2 top-full  ${dropdownVisible2 ? "relative w-full" : "hidden"} bg-green-600 shadow-lg p-2 space-y-2`}>
                                     <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/visimisi" className="block border-b w-full border-green-800 nav-link px-4 py-2 text-sm ">Visi Misi</NavLink>
                                     <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/izinoperasional" className="block border-b border-green-800 nav-link px-4 py-2 text-sm ">Izin Operasional</NavLink>
                                     <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/kepengurusan" className="block border-b border-green-800 nav-link px-4 py-2 text-sm ">Kepengurusan</NavLink>
@@ -94,7 +94,7 @@ function Navbar() {
                                 <div onClick={
                                     handleDropdownClick
                                 } className="flex border-b border-green-800 nav-link font-bold justify-between items-center">Basis Data <RiArrowDropDownLine size={20} /></div>
-                                <div className={`w-40 md:absolute pt-2 top-full -left-3 ${dropdownVisible ? "relative w-full" : "hidden"} bg-green-600 shadow-lg p-2 space-y-2`}>
+                                <div className={` md:absolute pt-2 top-full ${dropdownVisible ? "relative w-full" : "hidden"} bg-green-600 shadow-lg p-2 space-y-2`}>
                                     <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/about" className="block px-4 py-2 border-b border-green-800 nav-link text-sm ">Cek No Porsi</NavLink>
                                 </div>
                             </div>
