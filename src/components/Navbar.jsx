@@ -7,6 +7,8 @@ import { useState } from "react";
 function Navbar() {
 
     const [nav, setNav] = useState(false);
+    const [dropdownVisible, setDropdownVisible] = useState(false);
+
 
     const navActiveStyle = ({ isActive }) => {
         return {
@@ -14,6 +16,10 @@ function Navbar() {
             color: isActive ? '	#f1c232' : '',
         }
     }
+
+    const handleDropdownClick = () => {
+        setDropdownVisible(!dropdownVisible);
+    };
 
     return (
         <div className="navbar w-full md:block flex-row items-center justify-between md:p-2 bg-gradient-to-r from-green-600 to-green-700 text-white z-10">
@@ -66,7 +72,9 @@ function Navbar() {
                         <li><NavLink style={navActiveStyle} onClick={() => setNav(!nav)} className="border-b border-green-800 nav-link flex " exact to="/">Home</NavLink></li>
                         <li className="group z-10">
                             <div className="relative">
-                                <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/about" className="flex border-b border-green-800 nav-link justify-between items-center">Tentang Kami <RiArrowDropDownLine size={20} /></NavLink>
+                                <div onClick={() => {
+                                    handleDropdownClick();
+                                }} className="flex border-b border-green-800 nav-link font-bold justify-between items-center">Tentang Kami <RiArrowDropDownLine size={20} /></div>
                                 <div className="w-full  md:absolute pt-2 top-full -left-3 hidden bg-green-700 shadow-lg p-2 group-hover:block space-y-2 ">
                                     <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/visimisi" className="block border-b border-green-800 nav-link px-4 py-2 text-sm ">Visi Misi</NavLink>
                                     <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/izinoperasional" className="block border-b border-green-800 nav-link px-4 py-2 text-sm ">Izin Operasional</NavLink>
@@ -78,7 +86,9 @@ function Navbar() {
                         </li>
                         <li className="group z-10">
                             <div className="relative">
-                                <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/about" className="flex border-b border-green-800 justify-between items-center">Basis Data <RiArrowDropDownLine size={20} /></NavLink>
+                                <div onClick={() => {
+                                    handleDropdownClick();
+                                }} className="flex border-b border-green-800 nav-link font-bold justify-between items-center">Basis Data <RiArrowDropDownLine size={20} /></div>
                                 <div className="w-full  md:absolute pt-2 top-full -left-3 hidden bg-green-700 shadow-lg p-2 group-hover:block space-y-2 ">
                                     <NavLink style={navActiveStyle} onClick={() => setNav(!nav)} to="/about" className="block px-4 py-2 border-b border-green-800 nav-link text-sm ">Cek No Porsi</NavLink>
                                 </div>
