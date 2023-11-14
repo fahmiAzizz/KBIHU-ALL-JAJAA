@@ -2,7 +2,7 @@ import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import VisiMisi from './about/VisiMisi';
-import About from './About';
+import CarouselGallery from './CarouselGallery';
 
 const Home = () => {
     return (
@@ -22,11 +22,11 @@ const Home = () => {
                     <img src="./assets/gallery/img4.jpeg" alt='imgaa' className='max-h-screen ' />
                 </div>
             </Carousel >
-            <div className='h-auto'>
-                <About />
-            </div>
             <div className=''>
                 <VisiMisi />
+            </div>
+            <div className='bg-gradient-to-br from-green-400 to-green-600'>
+                <CarouselGallery />
             </div>
 
         </div>

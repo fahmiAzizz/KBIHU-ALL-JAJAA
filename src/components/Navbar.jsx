@@ -42,7 +42,7 @@ function Navbar() {
                     <li><NavLink style={navActiveStyle} className="nav-link" exact to="/">Home</NavLink></li>
                     <li className="group z-10">
                         <div className="relative">
-                            <NavLink style={navActiveStyle} to="/about" className="flex items-center nav-link">Tentang Kami <RiArrowDropDownLine size={20} /></NavLink>
+                            <NavLink style={navActiveStyle} to="/visimisi" className="flex items-center nav-link">Tentang Kami <RiArrowDropDownLine size={20} /></NavLink>
                             <div className="w-40  absolute pt-2 top-full -left-3 hidden bg-green-700 shadow-lg p-2 group-hover:block space-y-2 ">
                                 <NavLink style={navActiveStyle} to="/visimisi" className="block px-4 py-2 text-sm border-b border-green-800 nav-link ">Visi Misi</NavLink>
                                 <NavLink style={navActiveStyle} to="/izinoperasional" className="block px-4 py-2 text-sm border-b border-green-800 nav-link ">Izin Operasional</NavLink>
