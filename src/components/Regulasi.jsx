@@ -7,3 +7,4 @@ const Regulasi = () => {
 }
 
 export default Regulasi
+

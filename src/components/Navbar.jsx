@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi"
-import { GrClose } from "react-icons/gr"
+import { AiOutlineClose } from "react-icons/ai"
 import { RiArrowDropDownLine } from "react-icons/ri"
 import { useState } from "react";
 
@@ -67,7 +67,7 @@ function Navbar() {
                 </ul >
 
                 <div onClick={() => setNav(!nav)} className='cursor-pointer  pr-4 text-white md:hidden'>
-                    {nav ? <GrClose size={30} /> : <GiHamburgerMenu size={30} />}
+                    {nav ? <AiOutlineClose className="text-white" size={30} /> : <GiHamburgerMenu size={30} />}
                 </div>
             </div>
 
